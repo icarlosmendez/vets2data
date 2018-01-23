@@ -1,8 +1,14 @@
-# Vets2data
+# Vets2data source code.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.4.
 
-## Development server
+## Project setup
+
+### Clone the repo. 
+### cd into the root of the repo/project directory.
+### npm install or sudo npm install to build the node_modules directory from package.json.
+
+## Start development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
