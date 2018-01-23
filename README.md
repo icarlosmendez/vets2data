@@ -4,9 +4,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Project setup
 
-### Clone the repo. 
-### cd into the root of the repo/project directory.
-### npm install or sudo npm install to build the node_modules directory from package.json.
+Clone the repo. 
+cd into the root of the repo/project directory.
+npm install or sudo npm install to build the node_modules directory from package.json.
 
 ## Start development server
 
