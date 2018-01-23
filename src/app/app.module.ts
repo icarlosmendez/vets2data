@@ -1,5 +1,6 @@
 // Angular Library Modules
 import { NgModule }           from '@angular/core';
+import { FormsModule }        from '@angular/forms';
 import { BrowserModule }      from '@angular/platform-browser';
 
 // Other Library Modules
@@ -12,6 +13,7 @@ import { FooterComponent }    from './footer/footer.component';
 import { CopyrightComponent } from './copyright/copyright.component';
 import { WelcomeComponent }   from './welcome/welcome.component';
 import { ContactComponent } from './contact/contact.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 // Services
 
@@ -23,9 +25,10 @@ import { ContactComponent } from './contact/contact.component';
         AppComponent,
         HeaderComponent,
         FooterComponent,
-        CopyrightComponent,
         WelcomeComponent,
-        ContactComponent
+        ContactComponent,
+        CopyrightComponent,
+        ContactFormComponent
     ],
 
     // exports - the subset of declarations that should be visible and usable 
@@ -35,6 +38,7 @@ import { ContactComponent } from './contact/contact.component';
     // imports - other modules whose exported classes are needed 
     // by component templates declared in this module.
     imports: [
+        FormsModule,
         BrowserModule,
         AppRoutingModule
     ],

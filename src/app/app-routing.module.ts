@@ -37,7 +37,7 @@ const routes: Routes = [
     imports: [ CommonModule,
                 RouterModule.forRoot(routes, {
                     useHash: true,
-                    enableTracing: true // <-- debugging purposes only
+                    //enableTracing: true // <-- debugging purposes only
                 }) ],
     exports: [ CommonModule,
                RouterModule ]

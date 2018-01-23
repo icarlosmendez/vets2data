@@ -1,9 +1,10 @@
-#container-header {
-    background-color: lightblue;
+header {
+    // background-color: lightblue;
     height: 100px;
 }
 
-.logo {
+img.logo {
+    // background-image: url(../../assets/v2d_logo.jpg);
     width: 100px;
     float: left;
 }
