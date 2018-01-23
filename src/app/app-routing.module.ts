@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 // Components
 import { WelcomeComponent }     from './welcome/welcome.component';
+import { ContactComponent }     from './contact/contact.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,10 @@ const routes: Routes = [
     {
         path: 'welcome',
         component: WelcomeComponent
+    },
+    {
+        path: 'contact',
+        component: ContactComponent
     }
 ];
 
@@ -30,10 +35,10 @@ const routes: Routes = [
     // adding the common module to try and resolve routing issues after build --prod
     // reference: https://github.com/angular/angular/issues/13948
     imports: [ CommonModule,
-               RouterModule.forRoot(routes, {
-                   useHash: true,
-                   enableTracing: true // <-- debugging purposes only
-               }) ],
+                RouterModule.forRoot(routes, {
+                    useHash: true,
+                    enableTracing: true // <-- debugging purposes only
+                }) ],
     exports: [ CommonModule,
                RouterModule ]
 

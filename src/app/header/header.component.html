@@ -2,12 +2,19 @@
 <div id="container-header">
     <a routerLink="/">
         <img class="logo" src="../../assets/v2d_logo.jpg">
-        <h1>{{ title }}</h1>
+        <!-- <h1>{{ title }}</h1> -->
     </a>
 
+    <!-- Nav for accessing the authorized content routes -->
     <nav>
         <a routerLink="/signin">Sign In</a>
         <span> | </span>
         <a routerLink="/register">Register</a>
     </nav>
+
+    <!-- Nav for accessing the public facing content routes -->
+    <nav>
+        <a routerLink="/contact">Contact</a>
+    </nav>
+
 </div>

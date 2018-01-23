@@ -11,6 +11,7 @@ import { HeaderComponent }    from './header/header.component';
 import { FooterComponent }    from './footer/footer.component';
 import { CopyrightComponent } from './copyright/copyright.component';
 import { WelcomeComponent }   from './welcome/welcome.component';
+import { ContactComponent } from './contact/contact.component';
 
 // Services
 
@@ -23,7 +24,8 @@ import { WelcomeComponent }   from './welcome/welcome.component';
         HeaderComponent,
         FooterComponent,
         CopyrightComponent,
-        WelcomeComponent
+        WelcomeComponent,
+        ContactComponent
     ],
 
     // exports - the subset of declarations that should be visible and usable 
