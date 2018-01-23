@@ -1,19 +1,19 @@
 // Angular Library Modules
-import { NgModule }           from '@angular/core';
-import { FormsModule }        from '@angular/forms';
-import { BrowserModule }      from '@angular/platform-browser';
+import { NgModule }                from '@angular/core';
+import { FormsModule }             from '@angular/forms';
+import { BrowserModule }           from '@angular/platform-browser';
 
 // Other Library Modules
-import { AppRoutingModule }   from './app-routing.module';
+import { AppRoutingModule }        from './app-routing.module';
 
 // Components
-import { AppComponent }       from './app.component';
-import { HeaderComponent }    from './header/header.component';
-import { FooterComponent }    from './footer/footer.component';
-import { CopyrightComponent } from './copyright/copyright.component';
-import { WelcomeComponent }   from './welcome/welcome.component';
-import { ContactComponent } from './contact/contact.component';
-import { ContactFormComponent } from './contact-form/contact-form.component';
+import { AppComponent }            from './app.component';
+import { HeaderComponent }         from './header/header.component';
+import { FooterComponent }         from './footer/footer.component';
+import { CopyrightComponent }      from './copyright/copyright.component';
+import { WelcomeComponent }        from './welcome/welcome.component';
+import { ContactComponent }        from './contact/contact.component';
+import { ContactFormComponent }    from './contact-form/contact-form.component';
 
 // Services
 
