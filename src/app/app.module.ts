@@ -74,7 +74,8 @@ import { SigninComponent } from './signin/signin.component';
 
     // exports - the subset of declarations that should be visible and usable 
     // in the component templates of other modules.
-    exports: [],
+    exports: [
+    ],
     
     // imports - other modules whose exported classes are needed 
     // by component templates declared in this module.
