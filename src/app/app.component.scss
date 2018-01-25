@@ -1,0 +1,29 @@
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    font-weight: normal;
+    margin: 0 0 56px 0;
+}
+
+h1, h2, h3, h4 {
+    font-weight: normal;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+div.container {
+    display: grid;
+    // the use of 'width: 100%' defeats the 20px side padding
+    // So... don't use it!
+    // width: 100%;
+    max-width: 1280px;
+    position: relative;
+    margin: 60px auto 0;
+    padding: 0 20px;
+    
+}

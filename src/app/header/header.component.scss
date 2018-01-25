@@ -1,11 +1,14 @@
-header {
+.wrapper {
     background: #3f51b5;
+}
+
+header {
     color: #fff;
     height: 56px;
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
+    // left: 0;
+    // right: 0;
     z-index: 2;
 
     &.container {
@@ -15,11 +18,12 @@ header {
         position: relative;
         margin: auto;
         grid-template-areas: "logo public private";
-        grid-template-rows: 100%;
+        // grid-auto-rows: minmax(100px, auto);
         grid-template-columns: 1fr 6fr 3fr;
     }
 }
 
+// Current text based logo... Temporary
 header > a {
     grid-area: logo;
     color: #fff;
@@ -27,6 +31,8 @@ header > a {
     margin: 10px;
 }
 
+// This is commented out just until the logo graphics get revised
+// then we'll switch back to this from the one just above
 // img.logo {
 //     grid-area: logo;
 //     width: 50px;
