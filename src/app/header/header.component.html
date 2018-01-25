@@ -1,20 +1,27 @@
 <!-- app-header markup -->
-<header>
+<header class="mat-elevation-z6 container">
+    
     <a routerLink="/">
-        <img class="logo" src="../../assets/v2d_logo.jpg">
-        <!-- <h1>{{ title }}</h1> -->
+        <h1 class="textlogo">V2D</h1>
+        <!-- <img class="logo" src="../../assets/v2d_logo.jpg"> -->
     </a>
 
-    <!-- Nav for accessing the authorized content routes -->
-    <nav>
-        <a routerLink="/signin">Sign In</a>
-        <span> | </span>
-        <a routerLink="/register">Register</a>
+    <!-- Nav for accessing the public facing content routes -->
+    <nav class="public">
+        <mat-nav-list>
+            <a mat-list-item routerLink="/">Home</a>
+            <a mat-list-item routerLink="/mission">Mission</a>
+            <a mat-list-item routerLink="/training">Training</a>
+            <a mat-list-item routerLink="/contact">Contact</a>
+        </mat-nav-list>
     </nav>
 
-    <!-- Nav for accessing the public facing content routes -->
-    <nav>
-        <a routerLink="/contact">Contact</a>
+    <!-- Nav for accessing the authorized content routes -->
+    <nav class="private">
+        <mat-nav-list>
+            <a mat-list-item routerLink="/signin">Sign In</a>
+            <a mat-list-item routerLink="/register">Register</a>
+        </mat-nav-list>
     </nav>
 
 </header>

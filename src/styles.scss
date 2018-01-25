@@ -1,2 +1,65 @@
-/* You can add global styles to this file, and also import other style files */
-// @import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+/* This file will be used as the main file for bringing SCSS styles together. 
+ *
+ * Firstly we will use this file to define the theme styles for the application 
+ * using the Angular Material CSS library. Secondarily we will import the base styles
+ * used across the common elements of the application. Those styles are located in 
+ * app/app.component.scss. Lastly we will import the individual component specific 
+ * style sheets which will contain styles relevant only to the components themselves.
+*/
+
+/* A custom theme file does two things:
+ *
+ * Imports the mat-core() sass mixin. This includes all common styles that are used 
+ * by multiple components. This should only be included once in your application. 
+ * If this mixin is included multiple times, your application will end up with multiple 
+ * copies of these common styles.
+ *
+ * Defines a theme data structure as the composition of multiple palettes. This object 
+ * can be created with either the mat-light-theme function or the mat-dark-theme function. 
+ * The output of this function is then passed to the angular-material-theme mixin, which 
+ * will output all of the corresponding styles for the theme.
+ *
+ * A typical theme file will look something like this: 
+*/
+
+@import '~@angular/material/theming';
+@import url('//fonts.googleapis.com/icon?family=Material+Icons');
+
+// @import 'assets/scss/variables';
+@import 'app/app.component';
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue.
+$primary: mat-palette($mat-indigo, 500);
+$accent:  mat-palette($mat-lime, 500, A200, A400);
+
+// The warn palette is optional (defaults to red).
+$warn:    mat-palette($mat-red, 500);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$theme: mat-light-theme($primary, $accent, $warn);
+
+body {
+    font-family: $mat-font-family;
+    font-weight: normal;
+    margin: 0;
+}
+
+main {
+    margin: 60px 20px 20px;
+}
+
+h1, h2, h3, h4 {
+    font-weight: normal;
+}
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($theme);

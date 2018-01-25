@@ -6,7 +6,11 @@ import { RouterModule, Routes } from '@angular/router';
 
 // Components
 import { WelcomeComponent }     from './welcome/welcome.component';
+import { MissionComponent }     from './mission/mission.component';
+import { TrainingComponent }    from './training/training.component';
 import { ContactComponent }     from './contact/contact.component';
+import { RegisterComponent }    from './register/register.component';
+import { SigninComponent }      from './signin/signin.component';
 
 
 const routes: Routes = [
@@ -25,8 +29,24 @@ const routes: Routes = [
         component: WelcomeComponent
     },
     {
+        path: 'mission',
+        component: MissionComponent
+    },
+    {
+        path: 'training',
+        component: TrainingComponent
+    },
+    {
         path: 'contact',
         component: ContactComponent
+    },
+    {
+        path: 'register',
+        component: RegisterComponent
+    },
+    {
+        path: 'signin',
+        component: SigninComponent
     }
 ];
 

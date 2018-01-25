@@ -1,12 +1,45 @@
-// Angular Library Modules
+/* Angular Library Modules */
 import { NgModule }                from '@angular/core';
-import { FormsModule }             from '@angular/forms';
+import { FormsModule, 
+         ReactiveFormsModule }     from '@angular/forms';
 import { BrowserModule }           from '@angular/platform-browser';
+import { MatAutocompleteModule,
+         MatButtonModule,
+         MatButtonToggleModule,
+         MatCardModule,
+         MatCheckboxModule,
+         MatChipsModule,
+         MatDatepickerModule,
+         MatDialogModule,
+         MatExpansionModule,
+         MatGridListModule,
+         MatIconModule,
+         MatInputModule,
+         MatListModule,
+         MatMenuModule,
+         MatNativeDateModule,
+         MatPaginatorModule,
+         MatProgressBarModule,
+         MatProgressSpinnerModule,
+         MatRadioModule,
+         MatRippleModule,
+         MatSelectModule,
+         MatSidenavModule,
+         MatSliderModule,
+         MatSlideToggleModule,
+         MatSnackBarModule,
+         MatSortModule,
+         MatTableModule,
+         MatTabsModule,
+         MatToolbarModule,
+         MatTooltipModule,
+         MatStepperModule, }       from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-// Other Library Modules
+/* Other Library Modules */
 import { AppRoutingModule }        from './app-routing.module';
 
-// Components
+/* Components */
 import { AppComponent }            from './app.component';
 import { HeaderComponent }         from './header/header.component';
 import { FooterComponent }         from './footer/footer.component';
@@ -14,8 +47,12 @@ import { CopyrightComponent }      from './copyright/copyright.component';
 import { WelcomeComponent }        from './welcome/welcome.component';
 import { ContactComponent }        from './contact/contact.component';
 import { ContactFormComponent }    from './contact-form/contact-form.component';
+import { MissionComponent } from './mission/mission.component';
+import { TrainingComponent } from './training/training.component';
+import { RegisterComponent } from './register/register.component';
+import { SigninComponent } from './signin/signin.component';
 
-// Services
+/* Services */
 
 
 @NgModule({
@@ -28,7 +65,11 @@ import { ContactFormComponent }    from './contact-form/contact-form.component';
         WelcomeComponent,
         ContactComponent,
         CopyrightComponent,
-        ContactFormComponent
+        ContactFormComponent,
+        MissionComponent,
+        TrainingComponent,
+        RegisterComponent,
+        SigninComponent
     ],
 
     // exports - the subset of declarations that should be visible and usable 
@@ -40,7 +81,41 @@ import { ContactFormComponent }    from './contact-form/contact-form.component';
     imports: [
         FormsModule,
         BrowserModule,
-        AppRoutingModule
+        AppRoutingModule,
+
+        BrowserAnimationsModule,
+        ReactiveFormsModule,
+        MatAutocompleteModule,
+        MatButtonModule,
+        MatButtonToggleModule,
+        MatCardModule,
+        MatCheckboxModule,
+        MatChipsModule,
+        MatDatepickerModule,
+        MatDialogModule,
+        MatExpansionModule,
+        MatGridListModule,
+        MatIconModule,
+        MatInputModule,
+        MatListModule,
+        MatMenuModule,
+        MatNativeDateModule,
+        MatPaginatorModule,
+        MatProgressBarModule,
+        MatProgressSpinnerModule,
+        MatRadioModule,
+        MatRippleModule,
+        MatSelectModule,
+        MatSidenavModule,
+        MatSliderModule,
+        MatSlideToggleModule,
+        MatSnackBarModule,
+        MatSortModule,
+        MatTableModule,
+        MatTabsModule,
+        MatToolbarModule,
+        MatTooltipModule,
+        MatStepperModule
     ],
 
     // providers - creators of services that this module contributes to the global 

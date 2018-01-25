@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn add node-sass --save-dev
+  /usr/local/bin/node /usr/local/bin/yarn add @angular/material @angular/cdk
 
 PATH: 
   /usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
@@ -59,6 +59,7 @@ npm manifest:
       "karma-coverage-istanbul-reporter": "^1.2.1",
       "karma-jasmine": "~1.1.0",
       "karma-jasmine-html-reporter": "^0.2.2",
+      "node-sass": "^4.7.2",
       "protractor": "~5.1.2",
       "ts-node": "~3.2.0",
       "tslint": "~5.9.1",

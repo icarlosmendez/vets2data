@@ -12,13 +12,21 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://cdnjs.com/libraries/normalize">
 </head>
 
-<body class="">
+<body class="mat-app-background">
     
     <!-- the app-root holds all templated content delivered by components -->
     <!-- the primary feeder for components is src/app.component.html -->
-    <app-root></app-root>
+    <app-root class="mat-typography"></app-root>
+    
+    <!-- As a component of Angular Material, @angular/animations uses the WebAnimation API that isn't supported by all browsers yet. If you want to support Material component animations in these browsers, you'll have to include a polyfill. -->
+    <!-- Include the polyfill -->
+
+    <!-- This is in fact total bullshit because there is no such file as the one listed below and the fucking instructions are insufficient to lead on to a proper resolution! I'll leave it here for now because I'll likely find something else about it in the future. Let's hope!-->
+    
+    <!-- <script src="web-animations.min.js"></script> -->
 
 </body>
 
