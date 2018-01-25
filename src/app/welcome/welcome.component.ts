@@ -27,19 +27,19 @@ export class WelcomeComponent implements OnInit {
         // Bacon Ipsum API integration
         // AJAX call to API for some bacon
         // Add markup to page with id="baconIpsumOutput" and you got bacon!
-        $(document).ready(function() {
+        jQuery(document).ready(function() {
 
-            $.getJSON('https://baconipsum.com/api/?callback=?', 
+            jQuery.getJSON('https://baconipsum.com/api/?callback=?', 
                 { 'type':'meat-and-filler', 'start-with-lorem':'1', 'paras':'5' }, 
                 
                 function(baconGoodness) {
                 
                     if (baconGoodness && baconGoodness.length > 0) {
-                        $("#baconIpsumOutput").html('');
+                        jQuery("#baconIpsumOutput").html('');
 
                         for (var i = 0; i < baconGoodness.length; i++)
-                            $("#baconIpsumOutput").append('<p>' + baconGoodness[i] + '</p>');
-                        $("#baconIpsumOutput").show();
+                            jQuery("#baconIpsumOutput").append('<p>' + baconGoodness[i] + '</p>');
+                        jQuery("#baconIpsumOutput").show();
                     }
                 }
             );
