@@ -51,6 +51,8 @@ import { MissionComponent } from './mission/mission.component';
 import { TrainingComponent } from './training/training.component';
 import { RegisterComponent } from './register/register.component';
 import { SigninComponent } from './signin/signin.component';
+import { BlogComponent } from './blog/blog.component';
+import { BlogPostsComponent } from './blog-posts/blog-posts.component';
 
 /* Services */
 
@@ -69,7 +71,9 @@ import { SigninComponent } from './signin/signin.component';
         MissionComponent,
         TrainingComponent,
         RegisterComponent,
-        SigninComponent
+        SigninComponent,
+        BlogComponent,
+        BlogPostsComponent
     ],
 
     // exports - the subset of declarations that should be visible and usable 

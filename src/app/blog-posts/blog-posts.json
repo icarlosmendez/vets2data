@@ -1,0 +1,12 @@
+{ 
+  "posts": {
+    "101": {
+      "title": "Introduction to the Thesis of Theseus",
+      "content": "Lorem ipsum dolor sit amet, ...",
+      "created": 1483355533000,
+      "author": "Duncan"
+    },
+    "102": {
+    }
+  }
+}
