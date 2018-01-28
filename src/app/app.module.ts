@@ -39,6 +39,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 /* Other Library Modules */
 import { AppRoutingModule }        from './app-routing.module';
 
+/* Database Specific Modules etc. */
+import { AngularFireModule }       from 'angularfire2';
+// import { AngularFireDatabaseModule, 
+//          AngularFireDatabase }     from 'angularfire2/database';
+import { AngularFireAuthModule }   from 'angularfire2/auth';
+import { AngularFirestoreModule }  from 'angularfire2/firestore';
+import { AngularFireStorageModule } from 'angularfire2/storage';
+import { environment }             from '../environments/environment';
+
 /* Components */
 import { AppComponent }            from './app.component';
 import { HeaderComponent }         from './header/header.component';
@@ -47,12 +56,12 @@ import { CopyrightComponent }      from './copyright/copyright.component';
 import { WelcomeComponent }        from './welcome/welcome.component';
 import { ContactComponent }        from './contact/contact.component';
 import { ContactFormComponent }    from './contact-form/contact-form.component';
-import { MissionComponent } from './mission/mission.component';
-import { TrainingComponent } from './training/training.component';
-import { RegisterComponent } from './register/register.component';
-import { SigninComponent } from './signin/signin.component';
-import { BlogComponent } from './blog/blog.component';
-import { BlogPostsComponent } from './blog-posts/blog-posts.component';
+import { MissionComponent }        from './mission/mission.component';
+import { TrainingComponent }       from './training/training.component';
+import { RegisterComponent }       from './register/register.component';
+import { SigninComponent }         from './signin/signin.component';
+import { BlogComponent }           from './blog/blog.component';
+import { BlogPostsComponent }      from './blog-posts/blog-posts.component';
 
 /* Services */
 
@@ -87,6 +96,13 @@ import { BlogPostsComponent } from './blog-posts/blog-posts.component';
         BrowserModule,
         AppRoutingModule,
 
+        // Imports having to do with AngularFire
+        AngularFireModule.initializeApp(environment.firebase, 'vets2data'), // imports firebase/app, needed for everything
+        AngularFireAuthModule, // imports firebase/auth, only needed for auth features
+        AngularFirestoreModule, // imports firebase/firestore, only needed for database features
+        AngularFireStorageModule, // imports firebase/storage, only needed for storage features
+
+        // Imports having to do with Angular Material
         BrowserAnimationsModule,
         ReactiveFormsModule,
         MatAutocompleteModule,
@@ -124,7 +140,11 @@ import { BlogPostsComponent } from './blog-posts/blog-posts.component';
 
     // providers - creators of services that this module contributes to the global 
     // collection of services; they become accessible in all parts of the app.
-    providers: [],
+    providers: [
+
+        // AngularFireDatabase, 
+        // AngularFireDatabaseModule
+    ],
 
     // bootstrap - the main application view, called the root component, that hosts 
     // all other app views. Only the root module should set this bootstrap property.

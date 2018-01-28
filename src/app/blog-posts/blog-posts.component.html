@@ -1,3 +1,29 @@
-<p>
-  blog-posts works!
-</p>
+
+<div class="wrapper">
+    <div class="container">
+        <p class="mat-display-4">
+            Vets 2 Data Blog!
+        </p>
+
+        <br />
+
+        <section class="by-line">
+            <ul>
+                <li class="" *ngFor="let post of posts | async">
+                    <h2 class="mat-display-1">
+                        {{post.title}}
+                    </h2>
+                    
+                    <h3>{{post.content}}</h3>
+
+                    <h2>Written by {{post.author}}</h2>
+                    
+                </li>
+            </ul>
+
+            
+
+        </section>
+        
+    </div>
+</div>
