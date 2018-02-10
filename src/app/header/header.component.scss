@@ -51,6 +51,9 @@ header > nav {
     &.private > mat-nav-list > a {
         grid-area: private;
         float: right;
+        &.hidden {
+            display: none;
+        }
     }
 }
 

@@ -5,16 +5,17 @@
     <div class="container">
       <h1 class="mat-display-4">Sign in email form works!</h1>
 
-        <form #signInEmailForm="ngForm" id="signin-email-form">
+        <form id="signin-email-form" #signInEmailForm="ngForm">
             <div>
                 <mat-form-field>
                     <input matInput  
                         id              ="email" 
-                        type            ="email" 
-                        class           =""  
+                        type            ="text" 
+                        class           =""
+                        name            ="email" 
                         aria-controls   =""
-                        placeholder     ="Email"
-                        [formControl]="email"
+                        placeholder     ="Email address"
+                        autofocus       ="autofocus" 
                         required>
                     <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>    
                 </mat-form-field>
@@ -24,16 +25,19 @@
                     <input matInput  
                         id              ="password" 
                         type            ="password" 
-                        class           =""  
+                        class           =""
+                        name            ="password" 
                         aria-controls   =""
                         placeholder     ="Password"
                         required>
                 </mat-form-field>
             </div>
 
-            <button (click)="loginEmailPassword()"
+            <button 
+                id=""
                 type                    ="submit"
                 class                   =""
+                (click)="signinEmailForm( email, password )"
                 >Submit
             </button>
         </form>

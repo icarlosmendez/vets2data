@@ -8,6 +8,8 @@
 
 # dependencies
 /node_modules
+
+# environment variables
 /environments
 
 # IDEs and editors

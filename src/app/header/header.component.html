@@ -21,8 +21,23 @@
         <!-- Nav for accessing the authorized content routes -->
         <nav class="private">
             <mat-nav-list>
-                <a mat-list-item routerLink="/signin">Sign In</a>
-                <a mat-list-item routerLink="/signup">Sign Up</a>
+                <a 
+                    id="btnSignOut" 
+                    class="hidden" 
+                    mat-list-item 
+                    (click)="logOut()"
+                    >Log Out
+                </a>
+                <a 
+                    id="btnSignIn"
+                    mat-list-item 
+                    routerLink="/signin">Sign In
+                </a>
+                <a 
+                    id="btnSignUp"
+                    mat-list-item 
+                    routerLink="/signup">Sign Up
+                </a>
             </mat-nav-list>
         </nav>
 

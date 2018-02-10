@@ -18,38 +18,10 @@ export class SigninComponent implements OnInit {
 
     error: any;
 
-    constructor() { 
+    constructor(private router: Router) { 
         
     }
 
-    // Moved code to signin-email-form.component.ts
-
-    // loginEmailPassword(email, password) {
-    //     firebase.auth().signInWithEmailAndPassword(email, password)
-        
-    //     .catch(function(error) {
-            
-    //         // Handle Errors here.
-    //         var errorCode = error.code;
-    //         var errorMessage = error.message;
-    //         if (errorCode === 'auth/wrong-password') {
-    //             alert('The password you entered is incorrect. Please re-enter your password.');
-
-    //         } else if (errorCode === 'auth/invalid-email') {
-    //             alert('The email address you entered is not valid. Please re-enter your email.')
-            
-    //         } else if (errorCode === 'auth/user-not-found') {
-    //             alert('User not found.');
-            
-    //         } else if (errorCode === 'auth/user-disabled') {
-    //             alert('This user account has been disabled. Please contact the site administrator')
-
-    //         } else {
-    //             alert(errorMessage);
-    //         }
-            
-    //     });
-    // }
 
     loginGithub() {
 
@@ -59,7 +31,7 @@ export class SigninComponent implements OnInit {
         // create a new instance of the GithubAuthProvider
         var provider = new firebase.auth.GithubAuthProvider();
             // limit or define the scope of the authorization
-            provider.addScope('repo');
+            provider.addScope('user');
             // add custom params to define user actions
             provider.setCustomParameters({
                 'allow_signup': 'false'
@@ -75,6 +47,15 @@ export class SigninComponent implements OnInit {
             
             // The signed-in users info.
             var user = result.user;
+
+            console.log('The user' + user + 'has been issued the following token by Github: ' + token);
+
+            if(token) {
+                console.log('The user' + user + 'has been issued the following token by Github: ' + token);
+                this.router.navigate(['/welcome']);
+            };
+            
+
         
         }).catch(function(error) {
             
@@ -100,16 +81,7 @@ export class SigninComponent implements OnInit {
             }
         });
     }
-
-    logOut() {
-        firebase.auth().signOut().then(function() {
-        // Sign-out successful.
-        
-        }).catch(function(error) {
-        // An error happened.
-        
-        });
-    }
+    
 
     ngOnInit() {
         // firebase.initializeApp(environment.firebase, 'vets2data');

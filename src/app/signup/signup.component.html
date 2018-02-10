@@ -1,36 +1,45 @@
 <div class="wrapper">
     <div class="container container-form">
         
-        <p class="mat-display-4">
-            signup works!
-        </p>
+        <h1 class="mat-display-4">signup works!</h1>
         
-        <a routerLink="/login" id="goback">Go back</a>
+        <a routerLink="/signin" id="goback">Return to Sign In page</a>
 
         <h2>Join now</h2>
 
-        <span class="error" *ngIf="error">{{ error }}</span>
-
-        <form>
-
-            <input 
-                type="text" 
-                class=""
-                name="email"
-                placeholder="Email address" 
-                required>
-            
-            <input 
-                type="password" 
-                class=""
-                name="password"
-                placeholder="Password" 
-                required>
-
+        <form id="signup-email-form" #signUpEmailForm="ngForm">
+            <div>
+                <mat-form-field>
+                    <input matInput  
+                        id              ="email" 
+                        type            ="text" 
+                        class           =""
+                        name            ="email" 
+                        aria-controls   =""
+                        placeholder     ="Email address"
+                        autofocus       ="autofocus" 
+                        required>
+                    <!-- <mat-error *ngIf="email.invalid">{{ getErrorMessage() }}</mat-error>     -->
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field>
+                    <input matInput  
+                        id              ="password" 
+                        type            ="password" 
+                        class           =""
+                        name            ="password" 
+                        aria-controls   =""
+                        placeholder     ="Password"
+                        required>
+                </mat-form-field>
+            </div>
 
             <button 
+                id=""
                 type="submit"  
                 class=""
+                (click)="newUserEmailPassword( email, password )"
                 >Create my account
             </button>
 
