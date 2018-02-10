@@ -10,7 +10,7 @@ import { MissionComponent }     from './mission/mission.component';
 import { TrainingComponent }    from './training/training.component';
 import { BlogComponent }        from './blog/blog.component';
 import { ContactComponent }     from './contact/contact.component';
-import { RegisterComponent }    from './register/register.component';
+import { SignupComponent }      from './signup/signup.component';
 import { SigninComponent }      from './signin/signin.component';
 
 
@@ -46,8 +46,8 @@ const routes: Routes = [
         component: ContactComponent
     },
     {
-        path: 'register',
-        component: RegisterComponent
+        path: 'signup',
+        component: SignupComponent
     },
     {
         path: 'signin',

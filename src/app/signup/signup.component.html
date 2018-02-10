@@ -1,0 +1,40 @@
+<div class="wrapper">
+    <div class="container container-form">
+        
+        <p class="mat-display-4">
+            signup works!
+        </p>
+        
+        <a routerLink="/login" id="goback">Go back</a>
+
+        <h2>Join now</h2>
+
+        <span class="error" *ngIf="error">{{ error }}</span>
+
+        <form #formData='ngForm' (ngSubmit)="newUserEmailPassword(formData)">
+
+            <input 
+                type="text" 
+                class=""
+                name="email"
+                placeholder="Email address.." (ngModel)="email" 
+                required>
+            
+            <input 
+                type="password" 
+                class=""
+                name="password"
+                placeholder="Password" (ngModel)="password" 
+                required>
+
+
+            <button 
+                type="submit"  
+                class=""
+                [disabled]="!formData.valid">Create my account
+            </button>
+
+        </form>
+
+    </div>
+</div>

@@ -58,13 +58,16 @@ import { ContactComponent }        from './contact/contact.component';
 import { ContactFormComponent }    from './contact-form/contact-form.component';
 import { MissionComponent }        from './mission/mission.component';
 import { TrainingComponent }       from './training/training.component';
-import { RegisterComponent }       from './register/register.component';
-import { SigninComponent }         from './signin/signin.component';
+import { RegisterComponent }       from './register/register.component'; // remove me
 import { BlogComponent }           from './blog/blog.component';
 import { BlogPostsComponent }      from './blog-posts/blog-posts.component';
+import { SignupComponent }         from './signup/signup.component';
+import { SigninComponent }         from './signin/signin.component';
+// import { EmailComponent }          from './email/email.component';
+// import { MembersComponent }        from './members/members.component';
 
 /* Services */
-
+// import { AuthGuard }               from './auth.service';
 
 @NgModule({
     // declarations - the view classes that belong to this module. 
@@ -80,14 +83,19 @@ import { BlogPostsComponent }      from './blog-posts/blog-posts.component';
         MissionComponent,
         TrainingComponent,
         RegisterComponent,
-        SigninComponent,
         BlogComponent,
-        BlogPostsComponent
+        BlogPostsComponent,
+        SignupComponent,
+        SigninComponent
+        // EmailComponent,
+        // MembersComponent
     ],
 
     // exports - the subset of declarations that should be visible and usable 
     // in the component templates of other modules.
-    exports: [],
+    exports: [
+        AngularFireAuthModule
+    ],
     
     // imports - other modules whose exported classes are needed 
     // by component templates declared in this module.
@@ -144,6 +152,7 @@ import { BlogPostsComponent }      from './blog-posts/blog-posts.component';
 
         // AngularFireDatabase, 
         // AngularFireDatabaseModule
+        // AuthGuard
     ],
 
     // bootstrap - the main application view, called the root component, that hosts 
