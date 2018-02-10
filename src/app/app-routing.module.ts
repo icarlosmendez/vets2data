@@ -1,17 +1,18 @@
 
 // Modules
-import { NgModule }             from '@angular/core';
-import { CommonModule }         from '@angular/common';
-import { RouterModule, Routes } from '@angular/router';
+import { NgModule }                 from '@angular/core';
+import { CommonModule }             from '@angular/common';
+import { RouterModule, Routes }     from '@angular/router';
 
 // Components
-import { WelcomeComponent }     from './welcome/welcome.component';
-import { MissionComponent }     from './mission/mission.component';
-import { TrainingComponent }    from './training/training.component';
-import { BlogComponent }        from './blog/blog.component';
-import { ContactComponent }     from './contact/contact.component';
-import { SignupComponent }      from './signup/signup.component';
-import { SigninComponent }      from './signin/signin.component';
+import { WelcomeComponent }         from './welcome/welcome.component';
+import { MissionComponent }         from './mission/mission.component';
+import { TrainingComponent }        from './training/training.component';
+import { BlogComponent }            from './blog/blog.component';
+import { ContactComponent }         from './contact/contact.component';
+import { SignupComponent }          from './signup/signup.component';
+import { SigninComponent }          from './signin/signin.component';
+import { SigninEmailFormComponent } from './signin-email-form/signin-email-form.component';
 
 
 const routes: Routes = [
@@ -52,6 +53,10 @@ const routes: Routes = [
     {
         path: 'signin',
         component: SigninComponent
+    },
+    {
+        path: 'signin-email-form',
+        component: SigninEmailFormComponent
     }
 ];
 

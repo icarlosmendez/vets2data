@@ -11,27 +11,27 @@
 
         <span class="error" *ngIf="error">{{ error }}</span>
 
-        <form #formData='ngForm' (ngSubmit)="newUserEmailPassword(formData)">
+        <form>
 
             <input 
                 type="text" 
                 class=""
                 name="email"
-                placeholder="Email address.." (ngModel)="email" 
+                placeholder="Email address" 
                 required>
             
             <input 
                 type="password" 
                 class=""
                 name="password"
-                placeholder="Password" (ngModel)="password" 
+                placeholder="Password" 
                 required>
 
 
             <button 
                 type="submit"  
                 class=""
-                [disabled]="!formData.valid">Create my account
+                >Create my account
             </button>
 
         </form>

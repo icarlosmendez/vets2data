@@ -63,11 +63,9 @@ import { BlogComponent }           from './blog/blog.component';
 import { BlogPostsComponent }      from './blog-posts/blog-posts.component';
 import { SignupComponent }         from './signup/signup.component';
 import { SigninComponent }         from './signin/signin.component';
-// import { EmailComponent }          from './email/email.component';
-// import { MembersComponent }        from './members/members.component';
+import { SigninEmailFormComponent } from './signin-email-form/signin-email-form.component';
 
 /* Services */
-// import { AuthGuard }               from './auth.service';
 
 @NgModule({
     // declarations - the view classes that belong to this module. 
@@ -86,9 +84,8 @@ import { SigninComponent }         from './signin/signin.component';
         BlogComponent,
         BlogPostsComponent,
         SignupComponent,
-        SigninComponent
-        // EmailComponent,
-        // MembersComponent
+        SigninComponent,
+        SigninEmailFormComponent
     ],
 
     // exports - the subset of declarations that should be visible and usable 
@@ -106,6 +103,7 @@ import { SigninComponent }         from './signin/signin.component';
 
         // Imports having to do with AngularFire
         AngularFireModule.initializeApp(environment.firebase, 'vets2data'), // imports firebase/app, needed for everything
+        // AngularFireModule,
         AngularFireAuthModule, // imports firebase/auth, only needed for auth features
         AngularFirestoreModule, // imports firebase/firestore, only needed for database features
         AngularFireStorageModule, // imports firebase/storage, only needed for storage features

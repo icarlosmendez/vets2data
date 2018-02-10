@@ -1,22 +1,43 @@
 <div class="wrapper">
     <div class="container container-form">
         
-        <p class="mat-display-4">
-            signin works!
-        </p>
+        <h1 class="mat-display-4">sign in works!</h1>
+
+        <form #signinForm="ngForm" id="signin-form">
+            <div>
+                <span class="error" *ngIf="error">{{ error }}</span>
+            </div>
+            
+            <div>
+                <button (click)="loginGithub()" 
+                    type    =""
+                    class   =""
+                    id="gh"
+                    >Sign in With Github
+                </button> 
+            </div>
+            <br /> 
+            
+            <div>
+                <button 
+                    type            =""
+                    routerLink      ="/signin-email-form" 
+                    id              ="email"
+                    >Sign in with Email
+                </button>
+            </div>
+            
+            <div>
+                <a 
+                    routerLink="/signup" 
+                    routerLinkActive="active" 
+                    class=""
+                    ><br />No account? 
+
+                    <strong>Create one here</strong>
+                </a>
+            </div>
         
-        <img src="assets/images/lock.svg" id="lock">
-
-        <span class="error" *ngIf="error">{{ error }}</span>
-
-        <button (click)="loginFb()" id="fb">Login With Facebook</button><br>
-        <button (click)="loginGoogle()" id="google">Login With Google</button>
-        <button routerLink="/login-email" id="email">Email</button>
-
-        <a routerLink="/signup" routerLinkActive="active" class="alc">No account? 
-            <strong>Create one here</strong>
-        </a>
-
+        </form>
     </div>
 </div>
-

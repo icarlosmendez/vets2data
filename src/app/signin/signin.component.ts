@@ -1,7 +1,8 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
-import { AngularFireAuth } from 'angularfire2/auth';
-import * as firebase from 'firebase/app';
-import { Router } from '@angular/router';
+import { Component, OnInit, HostBinding }     from '@angular/core';
+import { AngularFireAuth }                    from 'angularfire2/auth';
+import * as firebase                          from 'firebase/app';
+import { Router }                             from '@angular/router';
+import { environment }                        from '../../environments/environment';
 
 
 @Component({
@@ -9,42 +10,51 @@ import { Router } from '@angular/router';
     templateUrl     : './signin.component.html',
     styleUrls       : ['./signin.component.scss']
 })
+
+
+// const auth = firebase.auth();
+
 export class SigninComponent implements OnInit {
 
     error: any;
 
-    constructor(public afAuth: AngularFireAuth, private router: Router) { 
+    constructor() { 
         
     }
 
-    loginEmailPassword(email, password) {
-        firebase.auth().signInWithEmailAndPassword(email, password)
+    // Moved code to signin-email-form.component.ts
+
+    // loginEmailPassword(email, password) {
+    //     firebase.auth().signInWithEmailAndPassword(email, password)
         
-        .catch(function(error) {
+    //     .catch(function(error) {
             
-            // Handle Errors here.
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            if (errorCode === 'auth/wrong-password') {
-                alert('The password you entered is incorrect. Please re-enter your password.');
+    //         // Handle Errors here.
+    //         var errorCode = error.code;
+    //         var errorMessage = error.message;
+    //         if (errorCode === 'auth/wrong-password') {
+    //             alert('The password you entered is incorrect. Please re-enter your password.');
 
-            } else if (errorCode === 'auth/invalid-email') {
-                alert('The email address you entered is not valid. Please re-enter your email.')
+    //         } else if (errorCode === 'auth/invalid-email') {
+    //             alert('The email address you entered is not valid. Please re-enter your email.')
             
-            } else if (errorCode === 'auth/user-not-found') {
-                alert('User not found.');
+    //         } else if (errorCode === 'auth/user-not-found') {
+    //             alert('User not found.');
             
-            } else if (errorCode === 'auth/user-disabled') {
-                alert('This user account has been disabled. Please contact the site administrator')
+    //         } else if (errorCode === 'auth/user-disabled') {
+    //             alert('This user account has been disabled. Please contact the site administrator')
 
-            } else {
-                alert(errorMessage);
-            }
+    //         } else {
+    //             alert(errorMessage);
+    //         }
             
-        });
-    }
+    //     });
+    // }
 
     loginGithub() {
+
+        firebase.initializeApp(environment.firebase);
+
         // Define the 'provider' variable for use in this method
         // create a new instance of the GithubAuthProvider
         var provider = new firebase.auth.GithubAuthProvider();
@@ -102,7 +112,7 @@ export class SigninComponent implements OnInit {
     }
 
     ngOnInit() {
-    
+        // firebase.initializeApp(environment.firebase, 'vets2data');
     }
 
 }
