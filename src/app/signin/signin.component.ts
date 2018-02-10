@@ -81,10 +81,10 @@ export class SigninComponent implements OnInit {
             }
         });
     }
-    
+
 
     ngOnInit() {
-        // firebase.initializeApp(environment.firebase, 'vets2data');
+        
     }
 
 }

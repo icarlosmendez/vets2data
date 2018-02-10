@@ -62,10 +62,8 @@ export class SigninEmailFormComponent implements OnInit {
     
     signinEmailForm() {
 
-        const emailVal = document.getElementById('email');
-        const passwordVal = document.getElementById('password');
-        const email = emailVal.value;
-        const password = passwordVal.value;
+        const email = (<HTMLInputElement>document.getElementById('email')).value;
+        const password = (<HTMLInputElement>document.getElementById('password')).value;
         const router = this.router;
         const user = firebase
 

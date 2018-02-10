@@ -61,12 +61,28 @@ export class SignupComponent implements OnInit {
 
     newUserEmailPassword() {
         
-        const emailVal = document.getElementById('email');
-        const passwordVal = document.getElementById('password');
-        const email = emailVal.value;
-        const password = passwordVal.value;
+        const email = (<HTMLInputElement>document.getElementById('email')).value;
+        const password = (<HTMLInputElement>document.getElementById('password')).value;
+        const router = this.router;
 
         firebase.auth().createUserWithEmailAndPassword(email, password)
+
+        // Quick check to see if sign in was successful
+        .then(function(result) {
+
+            if(!firebase.auth.length) {
+                // If not then log this
+                console.log('DEBUG: Not really sure yet...');
+                
+            } else {
+                // If so then log this and then
+                console.log('DEBUG: The user has successfully created a new account and signed in.');
+                // Redirect the user to the home page
+                router.navigate(['/welcome']);
+
+            }
+
+        }) 
         
         .catch(function(error) {
             

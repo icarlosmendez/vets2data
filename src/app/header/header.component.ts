@@ -1,12 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit }  from '@angular/core';
 import * as firebase          from 'firebase/app';
 import { environment }        from '../../environments/environment';
+import * as $                 from 'jQuery';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
+
+
 export class HeaderComponent implements OnInit {
 
     constructor() { }
@@ -42,15 +45,15 @@ export class HeaderComponent implements OnInit {
         
             if(currentUser) {
                 console.log("DEBUG: " + currentUser + " is signed in!");
-                jQuery(#btnSignOut).removeClass('hidden');
-                jQuery(#btnSignIn).addClass('hidden');
-                jQuery(#btnSignUp).addClass('hidden');
+                $('#btnSignOut').removeClass('hidden');
+                $('#btnSignIn').addClass('hidden');
+                $('#btnSignUp').addClass('hidden');
             } else {
                 console.log("DEBUG: Not signed in");
-                jQuery(#btnSignOut).removeClass('hidden');
-                jQuery(#btnSignOut).addClass('hidden');
-                jQuery(#btnSignIn).removeClass('hidden');
-                jQuery(#btnSignUp).removeClass('hidden');
+                $('#btnSignOut').removeClass('hidden');
+                $('#btnSignOut').addClass('hidden');
+                $('#btnSignIn').removeClass('hidden');
+                $('#btnSignUp').removeClass('hidden');
 
             }
         })
