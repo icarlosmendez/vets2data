@@ -13,6 +13,7 @@ import { ContactComponent }         from './contact/contact.component';
 import { SignupComponent }          from './signup/signup.component';
 import { SigninComponent }          from './signin/signin.component';
 import { SigninEmailFormComponent } from './signin-email-form/signin-email-form.component';
+import { ProfileComponent }         from './profile/profile.component';
 
 
 const routes: Routes = [
@@ -57,6 +58,10 @@ const routes: Routes = [
     {
         path: 'signin-email-form',
         component: SigninEmailFormComponent
+    },
+    {
+        path: 'profile',
+        component: ProfileComponent
     }
 ];
 

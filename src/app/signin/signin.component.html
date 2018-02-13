@@ -1,43 +1,64 @@
 <div class="wrapper">
-    <div class="container container-form">
+    <div class="container container-form mdl-card">
         
-        <h1 class="mat-display-4">sign in works!</h1>
+        <!-- <div id="loading">Loading...</div>
+        <div id="loaded" class="hidden"> -->
 
-        <form #signinForm="ngForm" id="signin-form">
-            <div>
-                <span class="error" *ngIf="error">{{ error }}</span>
-            </div>
-            
-            <div>
-                <button (click)="loginGithub()" 
-                    type    =""
-                    class   =""
-                    id="gh"
-                    >Sign in With Github
-                </button> 
-            </div>
-            <br /> 
-            
-            <div>
-                <button 
-                    type            =""
-                    routerLink      ="/signin-email-form" 
-                    id              ="email"
-                    >Sign in with Email
-                </button>
-            </div>
-            
-            <div>
-                <a 
-                    routerLink="/signup" 
-                    routerLinkActive="active" 
-                    class=""
-                    ><br />No account? 
+            <h1 class="mat-display-5">Let's get signed in!</h1>
 
-                    <strong>Create one here</strong>
-                </a>
+            <form #signinForm="ngForm" id="signin-form">
+                <div>
+                    <span class="error" *ngIf="error">{{ error }}</span>
+                </div>
+                
+                <div>
+                    <button (click)="signinGithub()" 
+                        type            =""
+                        class           ="mdl-button"
+                        id              ="gh"
+                        >Sign in With Github
+                    </button> 
+                </div>
+                <br /> 
+                
+                <!-- Commenting out the login with email option -->
+                <!-- Exclusively using the Github federated option for now -->
+                <!-- <div>
+                    <button 
+                        type            =""
+                        routerLink      ="/signin-email-form" 
+                        id              ="email"
+                        >Sign in with Email
+                    </button>
+                </div> -->
+                
+                <div>
+                    <a 
+                        routerLink      ="/signup" 
+                        routerLinkActive="active" 
+                        class           =""
+                        ><br />No account? 
+
+                        <strong>Create one here</strong>
+                    </a>
+                </div>
+            
+            </form>
+
+            <!-- *************************************************** -->
+                  
+            <div id="user-info">
+                <div id="photo-container">
+                    <img id="photo">
+                </div>
+                <div id="name"></div>
+                <div id="email"></div>
+                <div id="phone"></div>
+                <div class="clearfix"></div>
             </div>
+              
+        <!-- </div>    -->
         
-        </form>
+
     </div>
 </div>

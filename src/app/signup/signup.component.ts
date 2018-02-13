@@ -61,23 +61,27 @@ export class SignupComponent implements OnInit {
 
     newUserEmailPassword() {
         
+        // The first two constants defined below required specific code to allow for proper type casting
+        // due to peculiarities contained in TypeScript that are not present in JavaScript. See the following
+        // URL for information on this technique.
+        // https://stackoverflow.com/questions/12989741/the-property-value-does-not-exist-on-value-of-type-htmlelement
         const email = (<HTMLInputElement>document.getElementById('email')).value;
         const password = (<HTMLInputElement>document.getElementById('password')).value;
         const router = this.router;
 
         firebase.auth().createUserWithEmailAndPassword(email, password)
 
-        // Quick check to see if sign in was successful
         .then(function(result) {
 
+            // Quick check to see if sign in was successful
             if(!firebase.auth.length) {
                 // If not then log this
                 console.log('DEBUG: Not really sure yet...');
                 
             } else {
-                // If so then log this and then
+                // If so then log this
                 console.log('DEBUG: The user has successfully created a new account and signed in.');
-                // Redirect the user to the home page
+                // And then redirect the user to the home page
                 router.navigate(['/welcome']);
 
             }

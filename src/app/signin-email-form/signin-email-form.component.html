@@ -3,9 +3,10 @@
 <!-- Allows end user to request more information about vets2data offerings -->
 <div class="wrapper">
     <div class="container">
-      <h1 class="mat-display-4">Sign in email form works!</h1>
+        <h1 class="mat-display-4">Sign in email form works!</h1>
 
         <form id="signin-email-form" #signInEmailForm="ngForm">
+            
             <div>
                 <mat-form-field>
                     <input matInput  
@@ -20,6 +21,7 @@
                     <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>    
                 </mat-form-field>
             </div>
+            
             <div>
                 <mat-form-field>
                     <input matInput  
@@ -40,6 +42,7 @@
                 (click)="signinEmailForm()"
                 >Submit
             </button>
+        
         </form>
 
     </div>

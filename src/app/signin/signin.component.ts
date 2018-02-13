@@ -1,7 +1,6 @@
 import { Component, OnInit, HostBinding }     from '@angular/core';
-import { AngularFireAuth }                    from 'angularfire2/auth';
-import * as firebase                          from 'firebase/app';
 import { Router }                             from '@angular/router';
+import * as firebase                          from 'firebase/app';
 import { environment }                        from '../../environments/environment';
 
 
@@ -12,8 +11,6 @@ import { environment }                        from '../../environments/environme
 })
 
 
-// const auth = firebase.auth();
-
 export class SigninComponent implements OnInit {
 
     error: any;
@@ -23,41 +20,44 @@ export class SigninComponent implements OnInit {
     }
 
 
-    loginGithub() {
+    signinGithub() {
 
-        firebase.initializeApp(environment.firebase);
+        // make the router available inside the method
+        const router = this.router;
 
         // Define the 'provider' variable for use in this method
         // create a new instance of the GithubAuthProvider
         var provider = new firebase.auth.GithubAuthProvider();
             // limit or define the scope of the authorization
-            provider.addScope('user');
+            provider.addScope('user, repo');
             // add custom params to define user actions
             provider.setCustomParameters({
-                'allow_signup': 'false'
+                'allow_signup': 'true'
             });
         
         // call the signin method for the provider using a redirect 
         // redirects are the preferred method on mobile devices
-        firebase.auth().signInWithRedirect(provider).then(function(result) {
-            
+        firebase.auth().signInWithPopup(provider)
+
+        .then(function(result) {
+
+            var user = firebase.auth().currentUser;
             // This gives you a GitHub Access Token.
             // The token can be used to access the GitHub API.
             var token = result.credential.accessToken;
             
-            // The signed-in users info.
-            var user = result.user;
+            if (user) {
 
-            console.log('The user' + user + 'has been issued the following token by Github: ' + token);
+                console.log('DEBUG: The user ' + user.displayName + ' has been issued the following token by Github: ' + token);
 
-            if(token) {
-                console.log('The user' + user + 'has been issued the following token by Github: ' + token);
-                this.router.navigate(['/welcome']);
-            };
+                // Redirect the user to the home page after successful sign-in
+                router.navigate(['/profile']);
             
-
+            }
         
-        }).catch(function(error) {
+        })
+
+        .catch(function(error) {
             
             // Handle any Errors here.
             var errorCode = error.code;
@@ -79,12 +79,12 @@ export class SigninComponent implements OnInit {
                 console.error(error);
             
             }
+
         });
+
     }
 
 
-    ngOnInit() {
-        
-    }
+    ngOnInit() { }
 
 }

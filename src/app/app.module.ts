@@ -64,6 +64,7 @@ import { BlogPostsComponent }      from './blog-posts/blog-posts.component';
 import { SignupComponent }         from './signup/signup.component';
 import { SigninComponent }         from './signin/signin.component';
 import { SigninEmailFormComponent } from './signin-email-form/signin-email-form.component';
+import { ProfileComponent }        from './profile/profile.component';
 
 /* Services */
 
@@ -85,7 +86,8 @@ import { SigninEmailFormComponent } from './signin-email-form/signin-email-form.
         BlogPostsComponent,
         SignupComponent,
         SigninComponent,
-        SigninEmailFormComponent
+        SigninEmailFormComponent,
+        ProfileComponent
     ],
 
     // exports - the subset of declarations that should be visible and usable 

@@ -29,15 +29,21 @@
                     >Log Out
                 </a>
                 <a 
+                    id="btnProfile" 
+                    class="hidden" 
+                    mat-list-item 
+                    routerLink="/profile">{{ name }}
+                </a>
+                <a 
                     id="btnSignIn"
                     mat-list-item 
                     routerLink="/signin">Sign In
                 </a>
-                <a 
+                <!-- <a 
                     id="btnSignUp"
                     mat-list-item 
                     routerLink="/signup">Sign Up
-                </a>
+                </a> -->
             </mat-nav-list>
         </nav>
 
