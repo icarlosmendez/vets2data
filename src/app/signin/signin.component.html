@@ -1,49 +1,41 @@
 <div class="wrapper">
-    <div class="container container-form mdl-card">
-        
-        <!-- <div id="loading">Loading...</div>
-        <div id="loaded" class="hidden"> -->
 
-            <h1 class="mat-display-5">Let's get signed in!</h1>
-
-            <form #signinForm="ngForm" id="signin-form">
-                <div>
-                    <span class="error" *ngIf="error">{{ error }}</span>
-                </div>
-                
-                <div>
-                    <button (click)="signinGithub()" 
-                        type            =""
-                        class           ="mdl-button"
-                        id              ="gh"
-                        >Sign in With Github
-                    </button> 
-                </div>
-                <br /> 
-                
-                <!-- Commenting out the login with email option -->
-                <!-- Exclusively using the Github federated option for now -->
-                <!-- <div>
-                    <button 
-                        type            =""
-                        routerLink      ="/signin-email-form" 
-                        id              ="email"
-                        >Sign in with Email
-                    </button>
-                </div> -->
-                
-                <div>
-                    <a 
-                        routerLink      ="/signup" 
-                        routerLinkActive="active" 
-                        class           =""
-                        ><br />No account? 
-
-                        <strong>Create one here</strong>
-                    </a>
-                </div>
+    <div class="container">
+        <h1 class="callout">Let's get you signed in!</h1>
             
-            </form>
+            <div class="container-form mdl-card">
+                <form #signinForm="ngForm" id="signin-form">
+                    <div>
+                        <span class="error" *ngIf="error">{{ error }}</span>
+                    </div>
+                    
+                    <div>
+                        <img class="ghicon" src="../../assets/GitHub-Mark-32px.png">
+                        
+                        <button (click)="signinGithub()" 
+                            type            =""
+                            class           ="mdl-button mdl-button--colored"
+                            id              ="gh"
+                            >Sign in With Github 
+
+                        </button> 
+
+                    </div>
+                    <br /> 
+                    
+                    <div>
+                        <a 
+                            routerLink      ="/signup" 
+                            routerLinkActive="active" 
+                            class           =""
+                            ><br />No account? 
+                
+                            <strong>Create one here</strong>
+                        </a>
+                    </div>
+                
+                </form>
+            </div>
 
             <!-- *************************************************** -->
                   

@@ -1,80 +1,86 @@
 <!-- Contact Form -->
 <!-- Allows end user to request more information about vets2data offerings -->
 <div class="wrapper">
-    <div class="hero hero_05"></div>
+    <div>
+        <img class="hero" src="../../assets/hero_img_05.jpg">
+    </div>
     <div class="container">
-      <h1 class="mat-display-4">Tell us about yourself!</h1>
+        <h1 class="callout">Tell us about yourself!</h1>
 
-        <form #contactForm="ngForm" id="information-request-form">
-            <div class="">
-                <mat-form-field>
-                    <input matInput placeholder="First Name" 
-                        id              ="firstname" 
-                        type            ="text" 
-                        class           =""
-                        aria-controls   =""
-                        autofocus       ="autofocus" 
-                        required>
-                </mat-form-field>
-            </div>
-            <div>
-                <mat-form-field>
-                    <input matInput placeholder="Last Name" 
-                        id              ="lastname" 
-                        type            ="text" 
-                        class           =""
-                        aria-controls   =""
-                        required>
-                </mat-form-field>
-            </div>
-            <div>
-                <mat-form-field>
-                    <input matInput  
-                        id              ="email" 
-                        type            ="email" 
-                        class           =""  
-                        aria-controls   =""
-                        placeholder     ="Email"
-                        [formControl]="email"
-                        required>
-                    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>    
-                </mat-form-field>
-            </div>
-            <div>
-                <mat-form-field hintLabel="Include area-code">
-                    <input matInput  
-                        id              ="phone" 
-                        type            ="text" 
-                        class           =""  
-                        aria-controls   =""
-                        placeholder     ="Phone"
-                        required>
-                </mat-form-field>
-            </div>
-            <div>
-                <mat-form-field>
-                    <mat-select placeholder="I'm representing">
-                        <!-- <mat-option value="option">
-                            
-                        </mat-option> -->
-                        <mat-option>Self</mat-option>
-                        <mat-option>501(c)(3)</mat-option>
-                        <mat-option>Corp</mat-option>
-                        <mat-option>.edu</mat-option>
-                        <mat-option>.gov</mat-option>
-                    </mat-select>
-                </mat-form-field>
+        <div class="container-form mdl-card">
+            <form #contactForm="ngForm" id="information-request-form">
+                <div class="field-form">
+                    <mat-form-field>
+                        <input matInput placeholder="First Name" 
+                            id              ="firstname" 
+                            type            ="text" 
+                            class           =""
+                            aria-controls   =""
+                            autofocus       ="autofocus" 
+                            required>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field>
+                        <input matInput placeholder="Last Name" 
+                            id              ="lastname" 
+                            type            ="text" 
+                            class           =""
+                            aria-controls   =""
+                            required>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field>
+                        <input matInput  
+                            id              ="email" 
+                            type            ="email" 
+                            class           =""  
+                            aria-controls   =""
+                            placeholder     ="Email"
+                            [formControl]="email"
+                            required>
+                        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>    
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field hintLabel="Include area-code">
+                        <input matInput  
+                            id              ="phone" 
+                            type            ="text" 
+                            class           =""  
+                            aria-controls   =""
+                            placeholder     ="Phone"
+                            required>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field>
+                        <mat-select placeholder="I'm representing">
+                            <!-- <mat-option value="option">
+                                
+                            </mat-option> -->
+                            <mat-option>Self</mat-option>
+                            <mat-option>501(c)(3)</mat-option>
+                            <mat-option>Corp</mat-option>
+                            <mat-option>.edu</mat-option>
+                            <mat-option>.gov</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+            
+                </div>
+            
+                <button 
+                    type                        ="submit"
+                    class                       ="mdl-button mdl-button--colored"
+                    >Submit
+                </button>
+            </form>
+        </div>
 
-            </div>
-
-            <button 
-                type                        ="submit"
-                class                       =""
-                >Submit
-            </button>
-        </form>
         <!-- The p element below is where we'll eventually output our greeting -->
       <p class="" id="greeting"></p>
+
     </div>
 </div>
 

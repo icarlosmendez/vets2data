@@ -1,30 +1,29 @@
 // specialized styles for the information request form component
 
-#information-request-form > button {
-    margin-top: 8px;
+.hero_05 {
+    background-image: url("../../assets/hero_img_05.jpg");
 }
 
-button {
-    // float: right;
+h1 {
+    font: 300 6rem/6rem Roboto, "Helvetica Neue", sans-serif;
+    margin: 0 0 3rem;
+    letter-spacing: -0.025em;
 }
 
-.hero {
-    color: #fff;
+#information-request-form {
+    margin: 1rem;
+
+    & button {
+        margin-top: 8px;
+        float: right;
+    }
+}
+
+.container-form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+mat-form-field {
     width: 100%;
-    height: 450px;
-    &.hero_01 {
-        background-image: url("../../assets/hero_img_01.jpg");
-    }
-    &.hero_02 {
-        background-image: url("../../assets/hero_img_02.jpg");
-    }
-    &.hero_03 {
-        background-image: url("../../assets/hero_img_03.jpg");
-    }
-    &.hero_04 {
-        background-image: url("../../assets/hero_img_04.jpg");
-    }
-    &.hero_05 {
-        background-image: url("../../assets/hero_img_05.jpg");
-    }
 }

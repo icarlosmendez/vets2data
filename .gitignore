@@ -2,6 +2,7 @@
 
 # dev level assets
 /src/assets/img
+/src/assets/GitHub-Mark
 
 # compiled output
 /dist
