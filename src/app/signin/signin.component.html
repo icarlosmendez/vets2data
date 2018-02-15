@@ -3,53 +3,39 @@
     <div class="container">
         <h1 class="callout">Let's get you signed in!</h1>
             
-            <div class="container-form mdl-card">
-                <form #signinForm="ngForm" id="signin-form">
-                    <div>
-                        <span class="error" *ngIf="error">{{ error }}</span>
-                    </div>
-                    
-                    <div>
-                        <img class="ghicon" src="../../assets/GitHub-Mark-32px.png">
-                        
-                        <button (click)="signinGithub()" 
-                            type            =""
-                            class           ="mdl-button mdl-button--colored"
-                            id              ="gh"
-                            >Sign in With Github 
-
-                        </button> 
-
-                    </div>
-                    <br /> 
-                    
-                    <div>
-                        <a 
-                            routerLink      ="/signup" 
-                            routerLinkActive="active" 
-                            class           =""
-                            ><br />No account? 
-                
-                            <strong>Create one here</strong>
-                        </a>
-                    </div>
-                
-                </form>
-            </div>
-
-            <!-- *************************************************** -->
-                  
-            <div id="user-info">
-                <div id="photo-container">
-                    <img id="photo">
+        <div class="container-form mdl-card">
+            <form #signinForm="ngForm" id="signin-form">
+                <div>
+                    <span class="error" *ngIf="error">{{ error }}</span>
                 </div>
-                <div id="name"></div>
-                <div id="email"></div>
-                <div id="phone"></div>
-                <div class="clearfix"></div>
-            </div>
-              
-        <!-- </div>    -->
+                
+                <div>
+                    <img class="ghicon" src="../../assets/GitHub-Mark-32px.png">
+                    
+                    <button (click)="signinGithub()" 
+                        type            =""
+                        class           ="mdl-button mdl-button--colored"
+                        id              ="gh"
+                        >Sign in With Github 
+
+                    </button> 
+
+                </div>
+                <br /> 
+                
+                <div>
+                    <a 
+                        routerLink      ="/signup" 
+                        routerLinkActive="active" 
+                        class           =""
+                        ><br />No account? 
+            
+                        <strong>Create one here</strong>
+                    </a>
+                </div>
+            
+            </form>
+        </div>
         
 
     </div>

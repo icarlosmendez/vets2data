@@ -8,11 +8,15 @@
 
     <!-- The following script tag in addition to some alternate configuration steps in the routing module allowed the application to successfully locate all files required to run the app where it had been failing when built per the tutorial -->
     <!-- reference: https://github.com/angular/angular/issues/13948 -->
-    <script>document.write('<base href="' + document.location + '" />');</script>
+    <script>document.write('<base href="' + document.location + '/">');</script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- Bring in Normalize for cross-browser consistency -->
     <link href="https://cdnjs.com/libraries/normalize">
+    <!-- Bring in Googles Material Icons as a font -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 
 </head>
 
@@ -27,10 +31,6 @@
     <!-- <script src="web-animations.min.js"></script> -->
     <!-- Do this by uncommenting it in polyfills.ts -->
     
-    <!-- <script
-        src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script> -->
 </body>
 
 </html>
