@@ -1,5 +1,5 @@
 /* Angular Library Modules */
-import { NgModule }                from '@angular/core';
+import { NgModule, Component }     from '@angular/core';
 import { FormsModule, 
          ReactiveFormsModule }     from '@angular/forms';
 import { BrowserModule }           from '@angular/platform-browser';
@@ -65,8 +65,13 @@ import { SignupComponent }         from './signup/signup.component';
 import { SigninComponent }         from './signin/signin.component';
 import { SigninEmailFormComponent } from './signin-email-form/signin-email-form.component';
 import { ProfileComponent }        from './profile/profile.component';
+import { ProgressSpinnerComponent } from './progress-spinner/progress-spinner.component';
 
 /* Services */
+
+// @Component({
+//     AppComponent
+// });
 
 @NgModule({
     // declarations - the view classes that belong to this module. 
@@ -87,7 +92,8 @@ import { ProfileComponent }        from './profile/profile.component';
         SignupComponent,
         SigninComponent,
         SigninEmailFormComponent,
-        ProfileComponent
+        ProfileComponent,
+        ProgressSpinnerComponent
     ],
 
     // exports - the subset of declarations that should be visible and usable 
@@ -149,10 +155,8 @@ import { ProfileComponent }        from './profile/profile.component';
     // providers - creators of services that this module contributes to the global 
     // collection of services; they become accessible in all parts of the app.
     providers: [
-
         // AngularFireDatabase, 
         // AngularFireDatabaseModule
-        // AuthGuard
     ],
 
     // bootstrap - the main application view, called the root component, that hosts 

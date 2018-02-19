@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-// import { NgModule }          from '@angular/core';
+import { NgModule }          from '@angular/core';
 
 /* Components */
-// import { AppComponent }      from './app.component';
+import { AppComponent }      from '../app.component';
 
 @Component({
   selector: 'app-welcome',
@@ -10,14 +10,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./welcome.component.scss']
 })
 
-// @NgModule({
-//     declarations: [
-//         AppComponent
-//     ],
-//     imports: [
+@NgModule({
+    declarations: [
+        AppComponent
+    ],
+    imports: [
     
-//     ]
-// })
+    ]
+})
 
 export class WelcomeComponent implements OnInit {
 

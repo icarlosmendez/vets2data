@@ -24,7 +24,7 @@ const routes: Routes = [
         // default route utilizing a redirect 
         // activated when the app root is targeted
         path: '',
-        redirectTo: '/welcome',
+        redirectTo: 'welcome',
         pathMatch: 'full'
     },
     {
@@ -71,8 +71,8 @@ const routes: Routes = [
     // reference: https://github.com/angular/angular/issues/13948
     imports: [ CommonModule,
                 RouterModule.forRoot(routes, {
-                    useHash: true,
-                    //enableTracing: true // <-- debugging purposes only
+                    useHash: false, // <-- leave as false as we don't want to use HashLocationStrategy but PathLocationStrategy instead
+                    enableTracing: true // <-- debugging purposes only
                 }) ],
     exports: [ CommonModule,
                RouterModule ]

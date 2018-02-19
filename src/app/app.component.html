@@ -6,7 +6,19 @@
 
 <!-- router-outlet provides the location content accessed through a route. -->
 <!-- Routes are found in src/app-routing.module.ts -->
-<router-outlet class="loading"></router-outlet>
+<router-outlet>
+    <!-- <div>
+        <mat-spinner id="mat-spinner" class="loading"></mat-spinner>
+    </div> -->
+
+    <!-- loading layout replaced by app after startupp -->
+    <!-- <div id="mat-spinner" class="app-loading">
+        <div class="logo"></div>
+        <svg class="spinner" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+        </svg>
+    </div> -->
+</router-outlet>
 
 <!-- app-footer holds the footer markup -->
 <!-- the content is contained in footer/footer.component.html -->
